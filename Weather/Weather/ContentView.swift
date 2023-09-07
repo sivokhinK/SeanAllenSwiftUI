@@ -13,15 +13,15 @@ struct ContentView: View {
     
     let days = [
         Day(dayOfWeek: "TUE", imageName: "sun.dust.fill", temperature: 74),
-        Day(dayOfWeek: "WED", imageName: "cloud.rain.fill", temperature: 64),
-        Day(dayOfWeek: "THU", imageName: "cloud.bolt.rain.fill", temperature: 78),
+        Day(dayOfWeek: "WED", imageName: "cloud.fill", temperature: 64),
+        Day(dayOfWeek: "THU", imageName: "cloud.bolt.fill", temperature: 78),
         Day(dayOfWeek: "FRI", imageName: "cloud.fog.fill", temperature: 79),
         Day(dayOfWeek: "SAT", imageName: "cloud.sun.rain.fill", temperature: 81)
     ]
     
     var body: some View {
         ZStack {
-            BackgroundView(isNight: $isNight)
+            BackgroundView(isNight: isNight)
             
             VStack {
                 CityTextView(cityName: "Cupertino, CA")
@@ -40,7 +40,9 @@ struct ContentView: View {
                 Button() {
                     isNight.toggle()
                 } label: {
-                    WeatherButton(title: "Change Day Time", textColor: .blue, backgroundColor: .white)
+                    WeatherButton(title: "Change Day Time",
+                                   textColor: .blue,
+                                   backgroundColor: .white)
                 }
                 
                 Spacer()
@@ -65,8 +67,9 @@ struct WeatherDayView: View {
                 .font(.system(size: 16, weight: .medium, design: .default))
                 .foregroundColor(.white)
             Image(systemName: day.imageName)
-                .renderingMode(.original)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
+//                .foregroundStyle(.yellow, .orange, .pink)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
             Text("\(day.temperature)°")
@@ -78,14 +81,17 @@ struct WeatherDayView: View {
 
 struct BackgroundView: View {
     
-    @Binding var isNight: Bool
+    var isNight: Bool
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue,
-                                                     isNight ? .gray : Color("lightBlue")]),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        .edgesIgnoringSafeArea(.all)
+//        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue,
+//                                                     isNight ? .gray : Color("lightBlue")]),
+//                       startPoint: .topLeading,
+//                       endPoint: .bottomTrailing)
+//        .ignoresSafeArea()
+        ContainerRelativeShape()
+            .fill(isNight ? Color.black.gradient : Color.blue.gradient)
+            .ignoresSafeArea()
     }
 }
 
