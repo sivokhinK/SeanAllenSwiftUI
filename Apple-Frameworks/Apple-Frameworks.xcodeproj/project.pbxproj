@@ -14,6 +14,7 @@
 		ED75BBDC2AAC657300A17ADD /* FrameworkGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75BBDB2AAC657300A17ADD /* FrameworkGridView.swift */; };
 		ED75BBDE2AAC7EF100A17ADD /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75BBDD2AAC7EF100A17ADD /* FrameworkDetailView.swift */; };
 		ED75BBE02AAC81CD00A17ADD /* AFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75BBDF2AAC81CD00A17ADD /* AFButton.swift */; };
+		ED83BFB02AAC982100116E4A /* FrameworkGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83BFAF2AAC982100116E4A /* FrameworkGridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		ED75BBDB2AAC657300A17ADD /* FrameworkGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridView.swift; sourceTree = "<group>"; };
 		ED75BBDD2AAC7EF100A17ADD /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
 		ED75BBDF2AAC81CD00A17ADD /* AFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFButton.swift; sourceTree = "<group>"; };
+		ED83BFAF2AAC982100116E4A /* FrameworkGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +61,12 @@
 			children = (
 				ED75BBCB2AAC647600A17ADD /* Apple_FrameworksApp.swift */,
 				ED75BBDB2AAC657300A17ADD /* FrameworkGridView.swift */,
+				ED83BFAF2AAC982100116E4A /* FrameworkGridViewModel.swift */,
 				ED75BBDD2AAC7EF100A17ADD /* FrameworkDetailView.swift */,
 				ED75BBD92AAC64E400A17ADD /* Framework.swift */,
+				ED75BBDF2AAC81CD00A17ADD /* AFButton.swift */,
 				ED75BBCF2AAC647700A17ADD /* Assets.xcassets */,
 				ED75BBD12AAC647700A17ADD /* Preview Content */,
-				ED75BBDF2AAC81CD00A17ADD /* AFButton.swift */,
 			);
 			path = "Apple-Frameworks";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				ED75BBDA2AAC64E400A17ADD /* Framework.swift in Sources */,
 				ED75BBE02AAC81CD00A17ADD /* AFButton.swift in Sources */,
 				ED75BBCC2AAC647600A17ADD /* Apple_FrameworksApp.swift in Sources */,
+				ED83BFB02AAC982100116E4A /* FrameworkGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
