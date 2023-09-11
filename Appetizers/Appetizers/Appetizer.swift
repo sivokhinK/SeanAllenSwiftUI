@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Appetizer: Decodable {
+struct Appetizer: Decodable, Identifiable {
     let id: Int
     let name: String
     let description: String
@@ -18,7 +18,7 @@ struct Appetizer: Decodable {
     let carbs: Int
 }
 
-struct AppetizerResponse {
+struct AppetizerResponse: Decodable {
     let request: [Appetizer]
 }
 
