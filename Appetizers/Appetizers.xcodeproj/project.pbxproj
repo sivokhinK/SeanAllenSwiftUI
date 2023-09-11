@@ -10,6 +10,7 @@
 		ED678F632AAF1800004F233F /* AppetizerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED678F622AAF1800004F233F /* AppetizerListCell.swift */; };
 		ED678F652AAF1F0F004F233F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED678F642AAF1F0F004F233F /* NetworkManager.swift */; };
 		ED678F672AAF2065004F233F /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED678F662AAF2065004F233F /* APError.swift */; };
+		ED678F692AAF3013004F233F /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED678F682AAF3013004F233F /* AppetizerListViewModel.swift */; };
 		EDA4065E2AAE3D4400D4180D /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4065D2AAE3D4400D4180D /* Appetizer.swift */; };
 		EDF7E1A62AADE1F300D014D9 /* AppetizersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E1A52AADE1F300D014D9 /* AppetizersApp.swift */; };
 		EDF7E1A82AADE1F300D014D9 /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E1A72AADE1F300D014D9 /* AppetizerTabView.swift */; };
@@ -24,6 +25,7 @@
 		ED678F622AAF1800004F233F /* AppetizerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListCell.swift; sourceTree = "<group>"; };
 		ED678F642AAF1F0F004F233F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		ED678F662AAF2065004F233F /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
+		ED678F682AAF3013004F233F /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
 		EDA4065D2AAE3D4400D4180D /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
 		EDF7E1A22AADE1F300D014D9 /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7E1A52AADE1F300D014D9 /* AppetizersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersApp.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				EDF7E1A92AADE1F500D014D9 /* Assets.xcassets */,
 				EDF7E1AB2AADE1F500D014D9 /* Preview Content */,
 				EDF7E1B32AADE2E100D014D9 /* AppetizerListView.swift */,
+				ED678F682AAF3013004F233F /* AppetizerListViewModel.swift */,
 				EDF7E1B52AADE2ED00D014D9 /* AccountView.swift */,
 				EDF7E1B72AADE2F500D014D9 /* OrderView.swift */,
 				EDA4065D2AAE3D4400D4180D /* Appetizer.swift */,
@@ -161,6 +164,7 @@
 				EDA4065E2AAE3D4400D4180D /* Appetizer.swift in Sources */,
 				ED678F672AAF2065004F233F /* APError.swift in Sources */,
 				ED678F632AAF1800004F233F /* AppetizerListCell.swift in Sources */,
+				ED678F692AAF3013004F233F /* AppetizerListViewModel.swift in Sources */,
 				EDF7E1B62AADE2ED00D014D9 /* AccountView.swift in Sources */,
 				EDF7E1A82AADE1F300D014D9 /* AppetizerTabView.swift in Sources */,
 				ED678F652AAF1F0F004F233F /* NetworkManager.swift in Sources */,
@@ -223,7 +227,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -277,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -303,6 +307,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +337,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
