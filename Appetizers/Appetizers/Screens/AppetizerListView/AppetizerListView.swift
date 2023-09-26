@@ -16,6 +16,9 @@ struct AppetizerListView: View {
             NavigationView {
                 List(viewModel.appetizers) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
+                        .onTapGesture {
+                            viewModel.isShowingCard = true
+                        }
                 }
                 .navigationTitle("Appetizers")
             }
