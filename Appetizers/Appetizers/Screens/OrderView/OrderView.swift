@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct OrderView: View {
+    
+    @State private var orderItems = MockData.orderItems
+    @State private var totalSum = 0.0
+    
     var body: some View {
         NavigationView {
-            Text("Orders")
-                .navigationTitle("Orders")
+            VStack {
+                List {
+                    ForEach(orderItems) { appetizer in
+                        AppetizerListCell(appetizer: appetizer)
+                    }
+                    .onDelete(perform: deleteItems)
+                }
+                .listStyle(PlainListStyle())
+                
+                Spacer()
+                
+                Button {
+                    
+                } label: {
+                    APButton(title: "\(totalSum) - Place Order")
+                }
+                .padding(.bottom, 25)
+            }
+            .navigationTitle("🧾 Order")
         }
+    }
+    
+    func deleteItems(at offsets: IndexSet) {
+        orderItems.remove(atOffsets: offsets)
     }
 }
 
