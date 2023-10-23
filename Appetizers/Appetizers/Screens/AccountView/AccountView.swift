@@ -39,7 +39,6 @@ struct AccountView: View {
                 } header: {
                     Text("Requests")
                 }
-                .tint(.brandPrimary)
             }
             .navigationTitle("Account")
         }
