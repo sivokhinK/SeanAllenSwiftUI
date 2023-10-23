@@ -10,6 +10,11 @@ import SwiftUI
 struct AccountView: View {
     
     @StateObject var viewModel = AccountViewModel()
+    @FocusState private var focusedStateField: FormTextField?
+    
+    enum FormTextField {
+        case firstName, lastName, email
+    }
     
     var body: some View {
         NavigationView {
@@ -17,8 +22,19 @@ struct AccountView: View {
                 Section {
                     Group {
                         TextField("First Name", text: $viewModel.user.firstName)
+                            .focused($focusedStateField, equals: .firstName)
+                            .onSubmit { focusedStateField = .lastName }
+                            .submitLabel(.next)
+                        
                         TextField("Last Name", text: $viewModel.user.lastName)
+                            .focused($focusedStateField, equals: .lastName)
+                            .onSubmit { focusedStateField = .email }
+                            .submitLabel(.next)
+
                         TextField("Email", text: $viewModel.user.email)
+                            .focused($focusedStateField, equals: .email)
+                            .onSubmit { focusedStateField = nil }
+                            .submitLabel(.continue)
                             .keyboardType(.emailAddress)
                             .autocapitalization(.none)
                     }
@@ -41,6 +57,11 @@ struct AccountView: View {
                 }
             }
             .navigationTitle("Account")
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Button("Dismiss") { focusedStateField = nil }
+                }
+            }
         }
         .onAppear {
             viewModel.retrieveUser()
