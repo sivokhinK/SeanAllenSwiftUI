@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct ActivityIndicator: UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> UIActivityIndicatorView {
-        let activityIndicatorView = UIActivityIndicatorView(style: .large)
-        activityIndicatorView.color = .brandPrimary
-        activityIndicatorView.startAnimating()
-        return activityIndicatorView
-    }
-    
-    func updateUIView(_ uiView: UIActivityIndicatorView, context: Context) {}
-}
+//struct ActivityIndicator: UIViewRepresentable {
+//    
+//    func makeUIView(context: Context) -> UIActivityIndicatorView {
+//        let activityIndicatorView = UIActivityIndicatorView(style: .large)
+//        activityIndicatorView.color = .brandPrimary
+//        activityIndicatorView.startAnimating()
+//        return activityIndicatorView
+//    }
+//    
+//    func updateUIView(_ uiView: UIActivityIndicatorView, context: Context) {}
+//}
 
 struct LoadingView: View {
     var body: some View {
@@ -25,7 +25,10 @@ struct LoadingView: View {
             Color(.systemBackground)
                 .ignoresSafeArea()
             
-            ActivityIndicator()
+//            ActivityIndicator()
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: .brandPrimary))
+                .scaleEffect(2)
         }
     }
 }
